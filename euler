@@ -6,13 +6,13 @@ import matplotlib.pyplot as plt
 
 # Define the differential equation
 def f(t, y):
-    return 2 - 2 * t * y
+    return (y**2 + y) / t
 
 # Initial conditions
-t0 = 0
-y0 = 1
-h = 0.1
-t_max = 1
+t0 = 1
+y0 = -2
+h = 0.2
+t_max = 3
 
 # Calculate the number of steps
 n_steps = int((t_max - t0) / h) + 1
@@ -41,3 +41,4 @@ plt.ylabel('y')
 plt.title('Approximate Solution using Euler\'s Method')
 plt.grid(True)
 plt.show()
+
